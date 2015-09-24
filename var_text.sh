@@ -1,8 +1,0 @@
-FILE="path.txt"
-
-FILE_PATH=$(<$FILE)
-echo $FILE_PATH
-
-NEW_PATH="REWRITTEN"
-
-echo "$NEW_PATH" > $FILE
