@@ -19,7 +19,7 @@ load_notes(){
   PS3="Type a number or 'q' to quit: "
 
   # Create a list of files to display  http://wuhrr.wordpress.com/2009/09/10/simple-menu-with-bashs-select-command/
-  fileList=$(find . -maxdepth 1 -type f \( ! -iname ".*" \))  # ignores dot files like .DS_STORE 
+  fileList=$(find . -maxdepth 1 -type f \( ! -iname ".*" \) | sort -n)  # ignores dot files like .DS_STORE 
 
   # Show a menu and ask for input. 
   select noteFileName in $fileList; do
@@ -74,8 +74,8 @@ then
 else
   #INPUT=$1
   #INPUT=$*
-  #NOTE_TITLE=${$INPUT// /-}      # replace all spaces with hyphens
-  NOTE_TITLE=$INPUT
+  NOTE_TITLE=${INPUT// /-}      # replace all spaces with hyphens
+  #NOTE_TITLE=$INPUT
   touch "$NOTE_TITLE".mdown 
   mvim "$NOTE_TITLE".mdown
 fi
