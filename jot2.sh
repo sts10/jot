@@ -1,13 +1,11 @@
 #!/bin/bash
 
-MAP="/Users/samschlinkert/Documents/code/jot/path.txt"
+#MAP="/Users/samschlinkert/Documents/code/jot/path.txt"
+#JOT_ROUTE=$(<$MAP)
 
 INPUT="$*"
-CURRENTDIR=$(pwd)
-echo "pwd in here is"
-echo $CURRENTDIR
 
-JOT_ROUTE=$(<$MAP)
+JOT_ROUTE="/Users/samschlinkert/Dropbox/notes/"
 
 cd $JOT_ROUTE
 
@@ -24,9 +22,9 @@ load_notes(){
   fileList=$(find . -maxdepth 1 -type f \( ! -iname ".*" \))  # ignores dot files like .DS_STORE 
 
   # Show a menu and ask for input. 
-  select draftFileName in $fileList; do
-    if [ -n "$draftFileName" ]; then
-      FILENAME=${draftFileName}
+  select noteFileName in $fileList; do
+    if [ -n "$noteFileName" ]; then
+      FILENAME=${noteFileName}
     fi
     break
   done
@@ -38,10 +36,10 @@ load_notes(){
     exit 
   fi
 
-  if [ ! -f $FILENAME ]  # if user entry does not match an existing draft file name. 
+  if [ ! -f $FILENAME ]  # if user entry does not match an existing note file name. 
   then
     echo ''
-    echo "Sorry, I don't have that draft. Goodbye."
+    echo "Sorry, I don't have that note Goodbye."
     # cd $cwd
     exit 
   fi
@@ -51,12 +49,7 @@ load_notes(){
 }
 
 
-if [[ $INPUT == "here" ]]
-then 
-  NEW_PATH=$(pwd)
-  echo "$NEW_PATH/" > $MAP 
-  echo "Now jotting in "$NEW_PATH
-elif [[ $INPUT == "where" ]]
+if [[ $INPUT == "where" ]]
 then
   echo "You're jotting in "$JOT_ROUTE
 
