@@ -5,19 +5,14 @@ Jot is a simple shell script that allows you to write, open, and edit markdown f
 ## Installation
 
 1. Git Clone this directory to your local machine 
-
 2. Modify the `JOT_ROUTE` variable at the top of `jot.sh` so that it points to where you want your jotted notes to be saved.
-
 3. In your `.bash_profile`, paste the following:
-
 ```
 function jot { 
   bash /Users/$USER/Documents/code/jot/jot.sh "$*" 
 }
 ```
-
 substituting your file location of the `jot.sh` file. 
-
 4. By default Jot opens text files with the `mvim` command, since I use [MacVim](https://github.com/b4winckler/macvim/releases). To change this setting, you'll have to go through `jot.sh` and change each occurrence to your preferred command (`subl`, `vim`, `nano`, etc.)
 
 ## How to Use
