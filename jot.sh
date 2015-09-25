@@ -1,12 +1,8 @@
 #!/bin/bash
 
-#MAP="/Users/samschlinkert/Documents/code/jot/path.txt"
-#JOT_ROUTE=$(<$MAP)
-
 INPUT="$*"
 
 JOT_ROUTE="/Users/samschlinkert/Dropbox/notes/"
-
 cd $JOT_ROUTE
 
 
@@ -39,8 +35,7 @@ load_notes(){
   if [ ! -f $FILENAME ]  # if user entry does not match an existing note file name. 
   then
     echo ''
-    echo "Sorry, I don't have that note Goodbye."
-    # cd $cwd
+    echo "Sorry, I don't have that note. Goodbye."
     exit 
   fi
 
@@ -62,9 +57,10 @@ then
   fi
 elif [[ $INPUT == "help" ]]
 then
-  echo "jot here to place the jot."
+  echo "jot <file name, no extension> to jot a new file"
+  echo "jot select to be presented with list of your files"
+  echo "jot all to open all your notes in your text editor"
   echo "jot where to ask where you're currently jotting."
-  echo "jot <file name, no extension> to jot a new file."
 elif [[ $INPUT == "all" ]]
 then 
   mvim $JOT_ROUTE
@@ -72,14 +68,7 @@ elif [[ $INPUT == "select" ]]
 then
   load_notes
 else
-  #INPUT=$1
-  #INPUT=$*
   NOTE_TITLE=${INPUT// /-}      # replace all spaces with hyphens
-  #NOTE_TITLE=$INPUT
   touch "$NOTE_TITLE".mdown 
   mvim "$NOTE_TITLE".mdown
 fi
-
-
-
-
