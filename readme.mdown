@@ -1,6 +1,6 @@
 # Jot v. 0.1.0
 
-Jot is a simple shell script that allows you to write, open, and edit markdwon files in a specified directory from anywhere in your system. 
+Jot is a simple shell script that allows you to write, open, and edit markdown files in a specified directory from anywhere in your system. 
 
 ## Installation
 
