@@ -1,0 +1,31 @@
+# Jot v. 0.1.0
+
+Jot is a simple shell script that allows you to write, open, and edit markdwon files in a specified directory from anywhere in your system. 
+
+## Installation
+
+1. Git Clone this directory to your local machine 
+2. Modify the `JOT_ROUTE` variable at the top of `jot.sh` so that it points to where you want your jotted notes to be saved.
+3. In your `.bash_profile`, paste the following:
+
+```
+function jot { 
+  bash /Users/$USER/Documents/code/jot/jot.sh "$*" 
+}
+```
+
+substituting your file location of the `jot.sh` file. 
+4. By default Jot opens text files with the `mvim` command, since I use [MacVim](https://github.com/b4winckler/macvim/releases). To change this setting, you'll have to go through `jot.sh` and change each occurrence to your preferred command (`subl`, `vim`, `nano`, etc.)
+
+## How to Use
+
+From anywhere in your system, you can now run: 
+
+- `jot new file` to create `new-file.mdown` in your specified directory. Jot will also open the new file for you.
+- `jot select` to be presented with list of your files
+- `jot all` to open your specified jot directory in your chosen text editor. 
+- `jot where` to ask where you're currently jotting
+
+## Recommended Use
+
+Setting the `JOT_ROUTE` to a shared directory, like your computer's [Dropbox](https://www.dropbox.com/) folder, may be particularly useful for sharing notes between machines, including mobile devices. 

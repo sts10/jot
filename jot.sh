@@ -60,7 +60,7 @@ then
   echo "jot <file name, no extension> to jot a new file"
   echo "jot select to be presented with list of your files"
   echo "jot all to open all your notes in your text editor"
-  echo "jot where to ask where you're currently jotting."
+  echo "jot where to ask where you're currently jotting"
 elif [[ $INPUT == "all" ]]
 then 
   mvim $JOT_ROUTE
