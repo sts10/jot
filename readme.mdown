@@ -5,7 +5,9 @@ Jot is a simple shell script that allows you to write, open, and edit markdown f
 ## Installation
 
 1. Git Clone this directory to your local machine 
+
 2. Modify the `JOT_ROUTE` variable at the top of `jot.sh` so that it points to where you want your jotted notes to be saved.
+
 3. In your `.bash_profile`, paste the following:
 
 ```
