@@ -39,7 +39,7 @@ load_notes(){
     exit 
   fi
 
-  echo "opening file"
+  echo "Opening file "$FILENAME
   mvim $FILENAME
 }
 
