@@ -13,7 +13,8 @@ function jot {
 }
 ```
 substituting your file location of the `jot.sh` file. 
-4. By default Jot opens text files with the `mvim` command, since I use [MacVim](https://github.com/b4winckler/macvim/releases). To change this setting, you'll have to go through `jot.sh` and change each occurrence to your preferred command (`subl`, `vim`, `nano`, etc.)
+
+Note: By default Jot opens text files with the `mvim` command, since I use [MacVim](https://github.com/b4winckler/macvim/releases). To change this setting, you'll have to go through `jot.sh` and change each occurrence to your preferred command (`subl`, `vim`, `nano`, etc.)
 
 ## How to Use
 
