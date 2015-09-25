@@ -2,7 +2,7 @@
 
 INPUT="$*"
 
-JOT_ROUTE="/Users/samschlinkert/Dropbox/notes/"
+JOT_ROUTE="/Users/"$USER"/Dropbox/notes/"
 cd $JOT_ROUTE
 
 
