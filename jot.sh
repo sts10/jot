@@ -40,7 +40,7 @@ load_notes(){
   fi
 
   echo "Opening file "$FILENAME
-  mvim $FILENAME
+  $EDITOR $FILENAME
 }
 
 
@@ -63,12 +63,12 @@ then
   echo "jot where to ask where you're currently jotting"
 elif [[ $INPUT == "all" ]]
 then 
-  mvim $JOT_ROUTE
+  $EDITOR $JOT_ROUTE
 elif [[ $INPUT == "select" ]]
 then
   load_notes
 else
   NOTE_TITLE=${INPUT// /-}      # replace all spaces with hyphens
   touch "$NOTE_TITLE".mdown 
-  mvim "$NOTE_TITLE".mdown
+  $EDITOR "$NOTE_TITLE".mdown
 fi
