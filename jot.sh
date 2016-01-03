@@ -55,18 +55,22 @@ then
   then
     cd $JOT_ROUTE
   fi
+# elif [ $INPUT == "help" ] || [$INPUT == ""]
 elif [[ $INPUT == "help" ]]
 then
-  echo "jot <file name, no extension> to jot a new file"
-  echo "jot select to be presented with list of your files"
-  echo "jot all to open all your notes in your text editor"
-  echo "jot where to ask where you're currently jotting"
+  echo "'jot <file name, no extension>' to jot a new file"
+  echo "'jot select' to be presented with list of your files"
+  echo "'jot all' to open all your notes in your text editor"
+  echo "'jot where' to ask where you're currently jotting"
 elif [[ $INPUT == "all" ]]
 then 
   $EDITOR $JOT_ROUTE
 elif [[ $INPUT == "select" ]]
 then
   load_notes
+elif [[ $INPUT == "" ]]
+then
+  echo "run jot help for help"
 else
   NOTE_TITLE=${INPUT// /-}      # replace all spaces with hyphens
   touch "$NOTE_TITLE".mdown 
