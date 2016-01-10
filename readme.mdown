@@ -1,4 +1,4 @@
-# Jot v. 0.1.0
+# Jot v. 0.1.2
 
 Jot is a simple shell script that allows you to write, open, and edit markdown files in a specified directory from anywhere in your system. 
 
@@ -12,7 +12,7 @@ function jot {
   bash /Users/$USER/Documents/code/jot/jot.sh "$*" 
 }
 ```
-4. While still in your `.bash_profile`, be sure you have the `$EDITOR` global variable set to the command to open your preferred text editor. For example, `export EDITOR="mvim"` or `export EDITOR="subl"`.  
+While still in your `.bash_profile`, be sure you have the `$EDITOR` global variable set to the command to open your preferred text editor. For example, `export EDITOR="mvim"` or `export EDITOR="subl"`.  
 
 ## How to Use
 
@@ -25,4 +25,4 @@ From anywhere in your system, you can now run:
 
 ## Recommended Use
 
-Setting the `JOT_ROUTE` to a shared directory, like your computer's [Dropbox](https://www.dropbox.com/) folder, may be particularly useful for sharing notes between machines, including mobile devices. 
+Setting the `JOT_ROUTE` to a shared directory, like your computer's [Dropbox](https://www.dropbox.com/) folder, may be particularly useful for sharing notes between machines, including mobile devices. Here's a [blog post](http://sts10.github.io/blog/2015/09/28/passing-notes/) about integrating Jot with [Byword](https://itunes.apple.com/us/app/byword/id482063361?mt=8) on iOS. 
