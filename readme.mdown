@@ -25,4 +25,4 @@ From anywhere in your system, you can now run:
 
 ## Recommended Use
 
-Setting the `JOT_ROUTE` to a shared directory, like your computer's [Dropbox](https://www.dropbox.com/) folder, may be particularly useful for sharing notes between machines, including mobile devices. Here's a [blog post](http://sts10.github.io/blog/2015/09/28/passing-notes/) about integrating Jot with [Byword](https://itunes.apple.com/us/app/byword/id482063361?mt=8) on iOS. 
+Setting the `JOT_ROUTE` to a shared directory, like your computer's [Dropbox](https://www.dropbox.com/) folder, may be particularly useful for sharing notes between machines, including mobile devices. Here's a [blog post](https://sts10.github.io/2015/09/28/passing-notes.html) about integrating Jot with an app called [Byword](https://itunes.apple.com/us/app/byword/id482063361?mt=8) on iOS.
